@@ -27,10 +27,10 @@
 ## 装
 
 ```bash
-# 1. 链进 profile
+# 1. 链进 profile（package.json 的 dependencies 和 dsh.profile.bundles 各加一条）
 cd ~/.dsh/profiles/web
-npm pkg set dependencies.dsh-persona-cards="file:$PWD/../../Documents/deepseek-harness/default-workspace/dsh-persona-cards"
-# bundles 里也加一条 "dsh-persona-cards"
+npm pkg set dependencies.dsh-persona-cards="file:/path/to/dsh-persona-cards"
+# dsh.profile.bundles 里也加 "dsh-persona-cards"
 
 # 2. 建软链（比 pnpm install 快，改了源码立刻就是新的）
 ln -s /path/to/dsh-persona-cards node_modules/dsh-persona-cards
