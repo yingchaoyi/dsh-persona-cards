@@ -1,0 +1,4 @@
+# dsh-persona-cards bundle patch：把人设卡挂进 profile。
+- insert:
+    - id: persona-cards
+      name: dsh-persona-cards

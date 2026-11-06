@@ -1,0 +1,49 @@
+{
+  "name": "dsh-persona-cards",
+  "version": "0.1.0",
+  "description": "DSH 插件 · 人设卡：收录多套人格，点「使用」就换一个人说话。每轮把人设卡原文注入系统提示。",
+  "type": "module",
+  "main": "lib/index.mjs",
+  "exports": {
+    ".": "./lib/index.mjs",
+    "./client": "./client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "client.js",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "persona",
+    "roleplay",
+    "qq-bot"
+  ],
+  "license": "MIT",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "slots"
+      ],
+      "external": [
+        "react"
+      ]
+    }
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "author": "yingchaoyi",
+  "scripts": {
+    "test": "node test/smoke.mjs && node test/client-smoke.mjs"
+  }
+}
